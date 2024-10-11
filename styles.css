@@ -1,0 +1,120 @@
+/* Definição de cores */
+:root {
+    --primary-color: #ff4500;
+    --secondary-color: #ffdd57;
+    --bg-color: #1a1a1a;
+    --text-color: #fff;
+    --hover-color: #ff7043;
+    --error-color: #ff5555;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+header .logo-img {
+    max-width: 80px;
+    height: auto;
+}
+
+header h1 {
+    margin-left: 15px;
+    font-size: 2.5em;
+}
+
+/* Container do Menu */
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 25px var(--shadow-color);
+}
+
+.item-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.customize .option {
+    margin-top: 15px;
+}
+
+.price-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart-btn, .finalize-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover, .finalize-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: #333;
+    color: var(--text-color);
+}
+
+.required {
+    color: var(--error-color);
+}
+
+/* Feedback visual */
+.error-message {
+    color: var(--error-color);
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
